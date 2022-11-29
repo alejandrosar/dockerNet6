@@ -1,0 +1,12 @@
+Crear la imagen:
+docker image build -t nombre-imagen:verison -f ./DockerfileName
+sudo docker image build -t testnet:1.0 -f ./Dockerfile
+
+Crear container 
+docker container create --name nombreContainer -p puertoLocal:puertoDocker nombreImagenDocker
+sudo docker container create --name testnet -p 8080:8080 testnet:1.0
+
+Arrancar contenedor
+
+sudo docker start nombreContainer
+sudo docker start testnet
